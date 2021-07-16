@@ -1,0 +1,69 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main()
+{
+	char jan ;
+	int num;
+	
+	printf("じゃんけんの手を選んでください?\n");
+    printf("a:グー  b:チョキ  c:パー>");
+	scanf("%c", &jan);/* 数字ではなく文字を入力させる*/
+	printf("jan = %c\n", jan);
+	
+	srand(time(NULL));
+	 num = rand() % 3;
+	
+	
+	num = 2;
+	printf("num = %d\n", num);
+
+		if(num == 0){
+			printf("相手はグーを出しました！\n");
+			printf("num = %d\n", num);
+		}
+		else if(num == 1){
+			printf("相手はチョキを出しました！\n");
+			printf("num = %d\n", num);
+		}
+		else if(num == 2){
+			printf("相手はパーを出しました！\n");
+			printf("num = %d\n", num);
+		}
+	
+	switch(jan){
+	case 'a':
+		if(num == 0){
+			printf("あいこ！\n");
+		}
+		else if(num == 1){
+			printf("勝ち！\n");
+		}
+		else if(num == 2){
+			printf("負け！\n");
+		}
+ 		break; 
+	case 'b':
+		if(num == 0){
+			printf("負け！\n");
+		} 
+		else if(num == 1){
+			printf("あいこ！\n");
+		}
+		else if(num == 2){
+			printf("勝ち！\n");
+		}
+	 	break; 
+	case 'c':
+		if(num == 0){
+			printf("勝ち！\n");
+		}
+		else if(num == 1){
+			printf("負け！\n");
+		}
+		else if(num == 2){
+			printf("あいこ！\n");
+		}
+		 break; 
+	}
+}
